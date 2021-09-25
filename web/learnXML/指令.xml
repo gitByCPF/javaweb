@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<?xml-stylesheet type='text/css' href='指令.css' ?>
+<!--
+1. 第二行是xml指令，用来控制数据显示样式
+2. xml设计之初是为了替代掉html,因此具有样式控制的功能
+3. 一旦引入样式控制，xml的输出便会只显示数据，而不显示标签
+4. 但由于html使用广泛，xml转战数据存储、传输，因此指令很少使用了
+-->
+<node>
+    <to>女朋友</to>
+    <from>我</from>
+    <heading>提醒</heading>
+    <body>别忘了买三斤牛肉回来！</body>
+</node>

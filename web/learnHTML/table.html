@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+</head>
+<body>
+<!--
+border:指定边框粗细
+cellpadding:单元格边距
+cellspacing:内容与边框间距
+bgcolor:背景色
+-->
+<table border="1" width="40%" cellpadding="0" cellspacing="0" bgcolor="#faebd7">
+    <!--定义表格标题-->
+    <caption><b>学生信息表</b></caption>
+
+    <!--
+    > thead tbody tfoot
+    > 类似于html5中的语义化标签，但在5之前就有这些，增强可读性，与css结合定义样式
+    > 被三者包裹的内容会按照head body foot的顺序来排列
+    > 使用这些标签，可以实现把一部分定义为一个样式
+    -->
+    <thead>
+        <tr>
+            <!--th表示表头：会加粗，会居中-->
+            <th>编号</th>
+            <th>姓名</th>
+            <th>成绩</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr align="center">
+            <td>1</td>
+            <td>孙悟空</td>
+            <td>66</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr align="center">
+            <td>2</td>
+            <td>猪八戒</td>
+            <td>60</td>
+        </tr>
+    </tfoot>
+</table>
+<hr>
+<!--
+合并单元格：
+    1.rowspan   行宽
+    2.colspan   列合并
+
+-->
+<table border="1" width="40%" cellpadding="0" cellspacing="0" bgcolor="#faebd7">
+    <caption>合并表格</caption>
+    <tr>
+        <th rowspan="2">编号</th>
+        <th>姓名</th>
+        <th>成绩</th>
+    </tr>
+    <tr align="center">
+        <td>孙悟空</td>
+        <td>66</td>
+    </tr>
+    <tr align="center">
+        <td>2</td>
+        <td colspan="2">猪八戒</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单提交</title>
+</head>
+<body>
+<!--
+form用于定义表单，可以定义一个范围，范围代表采集用户数据的范围：
+    一、属性：
+        1.action="url"  指定数据提交的url
+        2.method="get"  指提交方式，一共七种，常用两种get\post(具体在将http协议时将)
+            2.1 get方式提交数据
+                > 请求参数会在地址栏中显示
+                > 请求参数的长度有限制
+                > 不太安全
+            2.2 post方式提交数据
+                > 请求参数不会在地址栏中显示，会被封装到请求体中
+                > 请求参数的大小没有限制
+                > 较为安全
+        3.表单项中的各项数据要想被提交，必须指定name
+        4.只有在form指定的范围内，数据才可以被提交
+    二、表单项标签
+        1.input     可以根据type属性值，改变表单项展示的样式
+            > text  默认值 文本输入框
+            > password  密码输入框，可以在输入密码时，以密文形式呈现，get方式提交仍然会显示在地址栏
+                1)以上两者要提示信息可使用placeholder
+            > radio 单选框
+                1）要想让多个单选框实现单选的效果，则多个单选框name属性值必须一样
+                2）要给每个单选框提供一个value属性值，指定被选中后提交给服务器的值
+                3）默认值设置，在要设置默认值的项内指定checked
+            > checkbox 复选框
+                1）2）与单选框一样
+            > label 用来修饰输入项的文字描述信息
+                1）label的for属性，一把会与input的id属性值对应，
+                   如果对应了，点击label区域，会让input输入框获得光标焦点
+            > file  文件选择框
+            > hidden 隐藏域，用于提交一些信息，但并不想在页面展示
+            > 按钮
+                1）submit 提交按钮，点击，可以将表单内各表单项数据提交
+                2）image 图片提交按钮，可以src指定某图片作为按钮的样式，点击同样有提交表单的作用
+                3）button 一个按钮，不具有提交表单的功能，主要是与js结合，做一些页面的动态效果
+        2.select    下拉列表
+            2.1 option子元素，指定列表项
+            2.2 默认值 指定selected标签
+            2.3 也可以使用第一个option来做一些提示，但这个option的value值为空
+        3.textarea  文本域
+            3.1 rows指定多少行
+            3.2 cols指定多少列
+-->
+<form action="#" method="get">
+    <label for="username">用户名：</label>
+    <input name="username" type="text" placeholder="请输入用户名" id="username"><br/>
+    <label for="pwd">密码：</label><!--注意，此处别把单词写成lable-->
+    <input name="password" type="password" placeholder="请输入密码" id="pwd"><br/>
+
+    <label>性别：</label>
+    <input type="radio" name="gender" value="man" checked>男
+    <input type="radio" name="gender" value="woman">女<br/>
+
+    <label>爱好：</label>
+    <input type="checkbox" name="hobby" value="shopping">购物
+    <input type="checkbox" name="hobby" value="java" checked>java
+    <input type="checkbox" name="hobby" value="game">游戏<br/>
+
+    <label>头像：</label>
+    <input type="file" name="profile"><br/>
+    <!--隐藏域--><input type="hidden" name="hide" value="我想被隐藏">
+    <!--http://localhost:63342/javaweb/web/LearnHTML/form.html?
+        username=逍遥云中君&password=123456&gender=man&hobby=java&hobby=game#-->
+    <input type="submit" value="登录"><br/>
+    <input type="image" src="../images/submit.jpg" alt="提交表单">
+    <!--
+    浏览器地址栏如下：(使用get方式)
+        提交前：http://localhost:63342/javaweb/web/LearnHTML/form.html?_ijt=bg4tceo6vd8t6sgsaur6elubgc
+        提交后：http://localhost:63342/javaweb/web/LearnHTML/form.html?
+                username=逍遥云中君&password=123456#
+    浏览器地址栏如下：(使用post方式)
+        提交后：http://localhost:63342/javaweb/web/LearnHTML/form.html?_ijt=e202bav15bo89kd0nbbjh1url3#
+    -->
+</form>
+<label for="province">省份</label>
+<select name="province" id="province">
+<!--<option value="">请选择</option>--><!--这是提示的一种方式，但是采用默认值更合理-->
+    <option value="1" selected>北京</option>
+    <option value="2">上海</option>
+    <option value="3">广州</option>
+    <option value="4">深圳</option>
+</select>
+<br/>
+<label for="desc">自我描述：</label><br/>
+<textarea name="desc" id="desc" cols="30" rows="10" placeholder="职业、兴趣等"></textarea>
+</body>
+</html>

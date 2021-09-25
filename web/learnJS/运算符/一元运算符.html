@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一元运算符</title>
+</head>
+<body>
+<!--
+只有一个运算数的运算符：
+    1. ++ -- 自增 自减，注意前后的区别
+    2.正号+ 负号-
+    3.注意：在js中，如果运算数不是运算符所要求的那样，js引擎会自动把运算数进行类型转换
+        3.1 其他类型转number
+            > string 转 number:能转成数值的string直接转换成数值，不能的直接转成NaN
+            > boolean 转 number:true转成1，false转成0
+            > null转成0
+            > undefined转成NaN
+
+-->
+<script>
+    let str1 = "123";
+    document.write("+数值字符串 : " + str1 + "<br/>");
+    let str2 = +"abc";
+    document.write(str2 + "<br/>");
+
+    let yes = true;
+    let no = false;
+    document.write(+yes + "<br/>")
+    document.write(+no + "<br/>")
+
+    document.write(+null + "<br/>")
+
+    document.write(+undefined + "<br/>")
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

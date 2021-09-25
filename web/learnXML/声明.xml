@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<!--
+0. 属性值既可以用单引号，也可以用双引号
+1. xml声明必须处于第一行
+2. ?与xml直接不允许存在空格
+3. 1.0版本是最稳定的
+4. encoding表示解析xml文件需要用到的编码,默认是ISO-8859-1
+5. standalone是否独立，但现在即使置为yes，仍然可以依赖其它文件，因此此属性不常用
+-->
+<node>
+    <to>女朋友</to>
+    <from>我</from>
+    <heading>提醒</heading>
+    <body>别忘了买三斤牛肉回来！</body>
+</node>

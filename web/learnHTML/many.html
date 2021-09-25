@@ -1,0 +1,81 @@
+<!--
+标签学习：
+    1.文件标签
+        1.0 <!DOCTYPE html> HTML5就只用这样写就可以了，之前的那种很复杂的淘汰了
+        1.1 html
+        1.2 head    头标签，用于指定html文档的一些属性，引入外部的资源
+        1.3 title
+        1.4 body
+    2.文本标签
+        2.1 <br> <br/>  换行，加不加斜杠均可，在html文档内手动换行，只会被解析为一个空字符
+        2.2 h1---h6     标题标签，数字越小，字体越大，标题都会加粗
+        2.3 <p>         段落标签，会换行，且间隔一行
+        2.4 <hr> <hr/>  水平线，上线具有一定间隔,自闭和标签
+        2.5 <b>         字体加粗
+        2.6 <i>         斜体
+        2.7 <font>      字体标签，html5已过时
+    3.图片标签
+        3.1 <image/>    图片标签，自闭和
+            > src指定图片的路径
+                >> 注意是左斜杠
+                >> 一般使用相对路径，./表示本目录，不写默认的就是./形式
+                >> ../表示退到上一级目录
+    4.列表标签
+        4.1 <ol> 有序列表
+            4.1.1 <li>  有序列表的每一项
+            4.1.2 type  呈现出不同的序列(1,2,3...)(a,b,c...)...
+            4.1.3 start 排序起点
+        4.2 <ul> 无序列表
+            4.2.1 <li>  无序列表的每一项
+            4.2.2 type  无序列表前面的标识（实心圆点、空心圆点...）
+
+    5.链接标签
+        5.1 <a href = "url">点我链接</a>
+        5.2 target 定义在哪里打开新链接页面 (默认值 _self本页面)(_blank新开页面)
+        5.3 不仅可以指定网络资源，也可以指定本项目页面资源
+        5.4 href = "mailto:邮箱" 点击可跳转到本机的邮件发送界面发邮件
+        5.5 <a href = ""><image src = ""></image></a> 点击图片，跳转链接
+-->
+
+<!DOCTYPE html>
+<html lang="ch"><!--en表示英语，ch表示汉语-->
+    <head>
+        <meta charset="UTF-8"><!--默认GBK编码-->
+        <title>标签学习</title>
+    </head>
+    <body>
+        <image alt = "美女" src = "../images/女孩子3.jpg" height = "100" width = "130"/>
+        <br>
+        <a target="_self" href="https://www.w3school.com.cn/tags/html_ref_byfunc.asp">
+            w3school.html手册.功能排序
+        </a><br>
+        <a target="_blank" href="https://www.w3school.com.cn/tags/html_ref_byfunc.asp">
+            w3school.html手册.功能排序
+        </a><br>
+        <a target="_blank" href="HelloWorld.html">HelloWorld</a><br>
+        <a href="mailto:cpfprogrammer@163.com">邮件联系我们</a>
+
+        <p><b><i><font color="#FF00FF" size="5" face="楷体">唐诗</font></i></b></p>
+        <h1>静夜思</h1>
+        <h2>静夜思</h2>
+        <h3>静夜思</h3>
+        <h4>静夜思</h4>
+        <h5>静夜思</h5>
+        <h6>静夜思</h6>
+        <!--html5已经不建议使用这些属性了，交给专业的CSS来做更好-->
+        <hr color="red" WIDTH="50%" ALIGN="LEFT"/>
+        <ol type="1" start="2">
+            <li><p>床前明月光</p></li>
+            <li><p><b>疑是地上霜</b></p></li>
+            <li><p><i>举头望明月</i></p></li>
+            <li><p><b><i>低头思故乡</i></b></p></li>
+        </ol>
+        <hr>
+        <ul type="disc">
+            <li><p>床前明月光</p></li>
+            <li><p><b>疑是地上霜</b></p></li>
+            <li><p><i>举头望明月</i></p></li>
+            <li><p><b><i>低头思故乡</i></b></p></li>
+        </ul>
+    </body>
+</html>

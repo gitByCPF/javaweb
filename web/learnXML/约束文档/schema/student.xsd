@@ -1,0 +1,46 @@
+<?xml version="1.0" ?><!--.xsd约束文件本质上也是一个xml文件-->
+<xsd:schema xmlns = "web/learnXML/约束技术/schema"
+            xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+            targetNamespace = "web/learnXML/约束技术/schema"
+            elementFormDefault = "qualified">
+
+    <!--先定义根标签及其类型-->
+    <xsd:element name = "students" type = "studentsType"/>
+    <!--studentsType类型需要有定义-->
+    <xsd:complexType name = "studentsType">
+        <xsd:sequence>
+            <xsd:element name = "student" type = "studentType" minOccurs = "1" maxOccurs = "unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!--studentType类型需要有定义-->
+    <xsd:complexType name = "studentType">
+        <xsd:sequence>
+            <xsd:element name = "name" type = "xsd:string"/>
+            <xsd:element name = "age" type = "ageType"/>
+            <xsd:element name = "gender" type = "genderType"/>
+        </xsd:sequence>
+        <xsd:attribute name = "number" type = "numberType" use = "required"/>
+    </xsd:complexType>
+    <!--自定义的属性类型numberType也需要有定义-->
+    <xsd:simpleType name = "numberType">
+        <xsd:restriction base = "xsd:string"><!--这个表示基础类型-->
+            <xsd:pattern value = "2021090501\d{2}"/><!--这个表示取值模式-->
+        </xsd:restriction>
+    </xsd:simpleType>
+    <!--自定义的ageType,对年龄的类型、范围做出约定-->
+    <xsd:simpleType name = "ageType">
+        <xsd:restriction base = "xsd:integer">
+            <xsd:minInclusive value = "0"/><!--这个表示取值范围-->
+            <xsd:maxInclusive value = "255"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <!--对性别做出约定-->
+    <xsd:simpleType name = "genderType">
+        <xsd:restriction base = "xsd:string">
+            <xsd:enumeration value = "male"/><!--这个表示枚举-->
+            <xsd:enumeration value = "female"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

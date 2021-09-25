@@ -1,0 +1,82 @@
+*{margin: 0px}
+body{ background: url("../../images/气泡星空.jpg") no-repeat center }
+.rg_layout{
+    width: 800px;
+    height: 450px;
+    border: 5px solid gray;
+    background: white;
+    /*水平居中*/
+    margin: 50px auto auto;
+    box-sizing: border-box;
+}
+.rg_left{
+    /*border: 1px solid red;*/
+    float:left;
+    margin: 15px;
+}
+.rg_center{
+    /*border: 1px solid red;*/
+    float: left;
+    margin-top: 15px;
+
+}
+.rg_right{
+    /*border: 1px solid red;*/
+    float: right;
+    margin: 15px;
+}
+.td_left{
+    width: 100px;
+    height: 40px;
+    text-align: right;
+    color: #C4C6C4;
+}
+.td_right{
+    padding-left: 30px;
+}
+#submit{
+    width: 100px;
+    height: 30px;
+    margin: auto;
+    color: orange;
+
+}
+.remind_ch{
+    color: #FAD16D;
+    font-size: 20px;
+}
+.remind_en{
+    color: #A8ABB1;
+    font-size: 20px;
+}
+#username,#password,#email,#name,#phone,#code{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;/*设置圆角边框*/
+    solid-color: #C4C6C4;
+    padding-left: 5px;
+}
+#code{
+    width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

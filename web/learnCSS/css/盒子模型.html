@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <!--各种标签空间上的边界、间距、嵌套关系-->
+    <!--margin外边距:是指相对于当前目标而言的外边距-->
+    <!--float属性：像div这样占一行的，默认下一个排列在下一行，float可以改变这一点-->
+    <style>
+        div{border: 2px solid red; width: 200px; height: 20px; float: left}
+        .div0{width: 500px; height: 500px}
+        .div1{
+            width: 200px; height: 200px; 
+            margin: 150px;/*外边距：控制自己处于大框的中心*/
+            padding: 50px;/*内边距，控制内部小框位于中心,但是单独的padding会改变框的大小*/
+            box-sizing: border-box;/*配合这个属性，能使得框最终的大小就是设置的那个尺寸*/
+        }
+        .div2{width: 100px; height: 100px;}
+    </style>
+</head>
+<body>
+
+<div class="div0">
+    <div class="div1">
+        <div class="div2">
+
+        </div>
+    </div>
+</div>
+<div>我想出现在大框右边</div>
+<div>我想出现在中间</div>
+<div>我想出现在最右边</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+如何引入约束文件：
+    1.填写xml文档的根目录，也是约束文件的根标签
+    2.引入xsi前缀（网络引入）xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    3.填写 xsi:schemaLocation = "命名空间 约束文件地址"
+        3.1 命名空间可以随意命名，但习惯上命名为约束文件的上一级目录
+        3.2 约束文件地址必须是真实有效的，可以是本地，也可以是网络上
+    4.命名空间缩写: 由于习惯上命名空间使用前一级目录，这个字符串就会很长，于是可以取别名
+        4.1 xmlns:别名 = "命名空间"
+        4.2 xmlns = "命名空间" 表示一个默认的命名空间，没有任何别名定位时，用这个命名空间
+
+-->
+<students xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation = "web/learnXML/约束技术/schema student.xsd"
+          xmlns = "web/learnXML/约束技术/schema">
+    <student number = "202109050149">
+        <name>11</name>
+        <age>111</age>
+        <gender>male</gender>
+    </student>
+
+
+
+</students>

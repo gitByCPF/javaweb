@@ -1,0 +1,15 @@
+<!ELEMENT students (student+)>
+<!ELEMENT student (name,age,gender)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ATTLIST student number ID #REQUIRED>
+<!--
++表示出现一次或多次
+*表示出现0次或多次
+#PCDTA表示字符串
+ELEMENT表示标签声明
+ATTLIST表示属性声明
+ID表示属性number的值必须唯一
+#REQUIRED表示属性值必不可少
+-->

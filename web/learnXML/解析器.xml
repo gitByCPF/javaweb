@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<note>
+<!--
+*xml常见的解析器：
+    1.JAXP：Sun公司提供的解析器，支持dom和SAX两种思想
+    2.DOM4J：一款非常优秀的解析器
+    3，Jsoup : jsoup是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。
+      它提供了一套非常省力的API，可通过DOM,css以及类似于jQuery的操作方法来取出和操作数据。
+    4.PULL : Android操作系统内置的解析器，sax方式的。
+
+提醒：使用jsoup来演示解析xml文件：见src/jsoup
+
+-->
+</note>

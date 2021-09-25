@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.jsoup.Jsoup</OriginalElement>
+  <nodes>
+    <node x="143.0" y="0.0">org.jsoup.nodes.Node</node>
+    <node x="73.49999999999999" y="168.0">org.jsoup.nodes.Document</node>
+    <node x="50.05555555555554" y="84.0">org.jsoup.nodes.Element</node>
+    <node x="0.0" y="0.0">org.jsoup.select.Elements</node>
+    <node x="87.49999999999999" y="252.0">org.jsoup.Jsoup</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.jsoup.nodes.Document" target="org.jsoup.nodes.Element">
+      <point x="0.0" y="-17.0" />
+      <point x="28.5" y="17.0" />
+    </edge>
+    <edge source="org.jsoup.Jsoup" target="org.jsoup.nodes.Document">
+      <point x="0.0" y="-17.0" />
+      <point x="0.0" y="17.0" />
+    </edge>
+    <edge source="org.jsoup.nodes.Node" target="org.jsoup.nodes.Document">
+      <point x="28.666666666666686" y="17.0" />
+      <point x="214.66666666666669" y="64.0" />
+      <point x="204.18055555555554" y="64.0" />
+      <point x="204.18055555555554" y="143.0" />
+      <point x="176.0" y="143.0" />
+      <point x="41.0" y="-17.0" />
+    </edge>
+    <edge source="org.jsoup.select.Elements" target="org.jsoup.nodes.Element">
+      <point x="30.75" y="17.0" />
+      <point x="-14.25" y="-17.0" />
+    </edge>
+    <edge source="org.jsoup.nodes.Element" target="org.jsoup.nodes.Node">
+      <point x="14.25" y="-17.0" />
+      <point x="121.30555555555554" y="54.0" />
+      <point x="157.33333333333331" y="54.0" />
+      <point x="-28.666666666666657" y="17.0" />
+    </edge>
+    <edge source="org.jsoup.nodes.Node" target="org.jsoup.nodes.Element">
+      <point x="0.0" y="17.0" />
+      <point x="186.0" y="64.0" />
+      <point x="149.80555555555554" y="64.0" />
+      <point x="42.75" y="-17.0" />
+    </edge>
+    <edge source="org.jsoup.nodes.Element" target="org.jsoup.select.Elements">
+      <point x="-42.75" y="-17.0" />
+      <point x="64.30555555555554" y="64.0" />
+      <point x="30.75" y="64.0" />
+      <point x="-30.75" y="17.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="114.5" y="143.0" />
+  <SelectedNodes>
+    <node>org.jsoup.select.Elements</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

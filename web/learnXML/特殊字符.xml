@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<text>
+    <!--
+    if(a > b && a < c){ a = 0 }
+    特殊符号需要转义：
+        1. < 转义成 &lt;
+        2. > 转义成 &gt;
+        3. & 转义成 &amp;
+    -->
+    <code>
+        if(a &gt; b &amp;&amp; a &lt; c){
+            a = 0
+        }
+        <!--
+        或者用CDATA区来包裹这些含有特殊符号的内容
+        格式：<![CDATA[此处填写内容]]>
+        注意：CDATA内外都有[]
+        -->
+        <![CDATA[if(a > b && a < c){ a = 0 }]]>
+    </code>
+</text>
